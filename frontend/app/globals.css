@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
 @import "tailwindcss";
 
-/* 👇 THIS IS THE FIX */
+/* 🔥 REQUIRED in Tailwind v4 */
 @source "./app/**/*.{js,ts,jsx,tsx}";
 @source "./components/**/*.{js,ts,jsx,tsx}";
 
-/* Optional */
-@source "./pages/**/*.{js,ts,jsx,tsx}";
+/* Fonts */
+
 
 * {
   transition: background-color 0.3s, color 0.3s;
