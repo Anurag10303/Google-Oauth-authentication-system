@@ -7,20 +7,22 @@ Users can securely log in using their Google account, maintain sessions using JW
 
 ## 🚀 Live Demo
 
-🌐 Frontend: https://your-frontend.vercel.app  
-🔗 Backend API: https://your-backend.onrender.com  
+🌐 Frontend: https://google-oauth-authentication-system.vercel.app
+🔗 Backend API: https://google-oauth-authentication-system-x3l9.onrender.com
 
 ---
 
 ## 🛠 Tech Stack
 
 ### Frontend
+
 - Next.js (React)
 - Tailwind CSS
 - Axios
 - Google OAuth (`@react-oauth/google`)
 
 ### Backend
+
 - Node.js
 - Express.js
 - MongoDB (Mongoose)
@@ -32,12 +34,14 @@ Users can securely log in using their Google account, maintain sessions using JW
 ## ✨ Features
 
 ### 🔑 Authentication
+
 - Google Sign-In using OAuth 2.0
 - Fetch user profile (name, email, image)
 - Store user in MongoDB (if not exists)
 - Secure authentication using JWT (HTTP-only cookies)
 
 ### 👤 User Management
+
 - Stores:
   - Name
   - Email
@@ -45,10 +49,12 @@ Users can securely log in using their Google account, maintain sessions using JW
   - Created At
 
 ### 🔓 Login / Logout
+
 - Login via Google account
 - Logout clears JWT cookie securely
 
 ### 🎨 UI Features
+
 - Fully responsive design
 - Dark Mode toggle 🌙
 - Loading states & error handling
@@ -93,6 +99,7 @@ project-root/
 ## ⚙️ Environment Variables
 
 ### Backend (`backend/.env`)
+
 MONGODB_URI=your_mongodb_uri
 JWT_SECRET=your_secret_key
 GOOGLE_CLIENT_ID=your_google_client_id
@@ -103,10 +110,10 @@ NODE_ENV=development
 ---
 
 ### Frontend (`frontend/.env.local`)
+
 NEXT_PUBLIC_API_URL=http://localhost:5000/api
 
 NEXT_PUBLIC_GOOGLE_CLIENT_ID=your_google_client_id
-
 
 ---
 
@@ -114,41 +121,37 @@ NEXT_PUBLIC_GOOGLE_CLIENT_ID=your_google_client_id
 
 ### 1️⃣ Clone the repo
 
-
 git clone https://github.com/your-username/your-repo.git
-
 
 ---
 
 ### 2️⃣ Setup Backend
 
-
 cd backend
 npm install
 npm run dev
-
 
 ---
 
 ### 3️⃣ Setup Frontend
 
-
 cd frontend
 npm install
 npm run dev
-
 
 ---
 
 ## 🌍 Deployment
 
 ### Backend (Render)
+
 - Add environment variables
 - Set:
   - `NODE_ENV=production`
   - `CLIENT_URL=https://your-frontend.vercel.app`
 
 ### Frontend (Vercel)
+
 - Add:
   - `NEXT_PUBLIC_API_URL`
   - `NEXT_PUBLIC_GOOGLE_CLIENT_ID`
