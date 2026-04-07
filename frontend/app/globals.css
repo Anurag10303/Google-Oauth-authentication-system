@@ -5,8 +5,8 @@
 @source "./app/**/*.{js,ts,jsx,tsx}";
 @source "./components/**/*.{js,ts,jsx,tsx}";
 
-/* Fonts */
-
+/* 🔥 REQUIRED for class-based dark mode in Tailwind v4 */
+@variant dark (&:where(.dark, .dark *));
 
 * {
   transition: background-color 0.3s, color 0.3s;
