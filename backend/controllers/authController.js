@@ -12,10 +12,11 @@ function signAuthToken(userId) {
 
 function setAuthCookie(res, token) {
   const isProduction = process.env.NODE_ENV === "production";
+
   res.cookie("token", token, {
     httpOnly: true,
-    secure: isProduction,
-    sameSite: isProduction ? "none" : "lax",
+    secure: isProduction, // ✅ true on Render
+    sameSite: isProduction ? "none" : "lax", // ✅ VERY IMPORTANT
     maxAge: 7 * 24 * 60 * 60 * 1000,
   });
 }
@@ -25,12 +26,9 @@ async function googleAuth(req, res) {
     const { credential, accessToken } = req.body;
 
     if (!credential && !accessToken) {
-      return res
-        .status(400)
-        .json({
-          message:
-            "Either Google credential token or access token is required.",
-        });
+      return res.status(400).json({
+        message: "Either Google credential token or access token is required.",
+      });
     }
 
     let payload;

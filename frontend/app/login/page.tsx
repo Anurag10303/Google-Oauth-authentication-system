@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import api from "../../utils/api";
 import Spinner from "../../components/Spinner";
 import DarkModeToggle from "../../components/DarkModeToggle";
+import { CredentialResponse } from "@react-oauth/google";
 
 export default function LoginPage() {
   const { setUser, user } = useAuth();
@@ -17,7 +18,7 @@ export default function LoginPage() {
     if (user) router.push("/dashboard");
   }, [user]);
 
-  const handleSuccess = async (res) => {
+  const handleSuccess = async (res: CredentialResponse) => {
     setLoading(true);
     try {
       const response = await api.post("/auth/google", { credential: res.credential });

@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 const allowedOrigins = (
   process.env.CLIENT_URL ||
-  "https://pramyan-assignment.vercel.app,http://localhost:3000"
+  "http://localhost:3000"
 )
   .split(",")
   .map((origin) => origin.trim())
